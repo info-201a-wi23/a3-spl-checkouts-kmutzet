@@ -16,7 +16,7 @@ To access the datasets, you will need to download them as zip files by clicking 
 - Dataset with items checked out at least 10 times a month from 2017-20203 (file size: 229 MB)
 - Dataset with all items checked out in 2022-2023 (file size: 709 MB)
 
-The datasets are large, so you should assess how much storage space you have on your computer (Mac / Windows), and then decide which dataset to choose based on that assessment. You are also welcome to create and use your own datasets through the [SPL Open Data portal](https://data.seattle.gov/Community/Checkouts-by-Title/tmmm-ytt6/explore).
+The datasets are large, so you should assess how much storage space you have on your computer (Mac / Windows), and then decide which dataset to choose based on that assessment. You are also welcome to create and use your own datasets through the [SPL Open Data portal](https://data.seattle.gov/Community/Checkouts-by-Title/tmmm-ytt6/explore). <-- Did this!
 
 For example, if you want to compare the number of checkouts for all of the Lord of the Rings books, you could go into the portal, search for Lord of Rings (you might need to use advanced search and filtering options for some searches), and then download the relevant data and upload it into RStudio for use in your assignment.
 
@@ -26,7 +26,12 @@ For this assignment, you will create a report about library circulation trends, 
 
 - An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
 - A paragraph of summary information, citing at least 5 values calculated from the data
+
 - A more detailed description of the dataset, who collected/published it, why, and any limitations or problems with the data
+
 - A first chart that shows trends over time for variables of your choice
 - A second chart that shows trends over time for a variables of your choice
 - A third chart that uses any kind of plot (bar chart, scatterplot, it's up to you)
+time year vs # of checked out books (show tiktok influence)
+time vs ebooks and standard
+bar chart (number of checked out copies for unique titles)

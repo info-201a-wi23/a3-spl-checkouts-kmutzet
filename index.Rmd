@@ -6,35 +6,85 @@ output: html_document
 ### Introduction
 
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+This dataset is an account of all of the checkouts for stories from the author Sarah J. Maas. Author Maas is 
+known for many great romance and fantasy novels, so I am a fan of her works and wanted to look at the data 
+over the past couple years of just her books. During Covid-19 there was a rise of this "Booktok" hashtag 
+on the app Tiktok, many videos of people suggesting books for others to read. I have come across this hashtag
+multiple times during quarantine, most of the videos being romance or fantasy recommendations. I know that one
+series from Sarah J. Maas was heavily recommended on Tiktok, so I am looking at the data with questions surrounding
+the influence of Tiktok on book checkout numbers, and overall how quarantine affected fantasy and romance checkout
+numbers. Why am I curious about this in particular: many have used apps like Tiktok and read novels of fantasy, 
+romance, or distopian genres as a means of escape during Covid qurantine times, I simply want to see if this is
+true for an author like Sarah J. Maas!
 
 ### Summary Information
 
 Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
+According to a couple of articles from multiple news sources (like the Guardian), Booktok, a hashtag page on the app
+Tiktok started and became trending after August 2020 when a person's book recommendation Tiktok went viral. It has 
+become a page of popular book recommendations (mostly romance) for people to find out about books. Sarah J. Maas's 
+books like A Court of Thorns and Roses have excelled in the romance category in terms of recommendations on Tiktok.
 
-These will likely be calculated using your DPLYR skills, answering questions such as:
+Looking at the data, we have to take into account the rise of eBooks from intense quaranting during the Covid 
+pandemic (libraries and bookstores closed), the increased number of books read in general from people being stuck 
+in quarantine, as well as the rise in demand for romance and fantasy novels (from recommendations on Tiktok). 
+The average number of checkouts per item in the dataset is _17.6_ and looking at the number of checkouts per year we 
+got:
+2012: __*80*__ 2013: __*291*__ 2014: __*752*__ 2015: __*1553*__ 2016: __*2563*__ 2017: __*3405*__ 2018: __*4431*__ 
+2019: __*5595*__ 2020: __*6238*__ 2021: __*11212*__ 2022: __*18370*__ 2023: __*2141*__ 
+(We are not looking at 2023 too much since the year is not over yet)
 
+Looking at this data we can definitely see a steady increase each year, and a sharp increase (almost doubles from 2020 
+to 2021) which can imply the theories regarding Covid-19 and quarantine, as well as Tiktok. Looking more closely at 
+2020 after the month of August (when Booktok really kicked off), there is a steady increase in the numbers after those 
+months. The month with the maximum eBook checkouts in 2020 was _December_, further proving the previous statement of 
+the increase. Looking at the differences between ebooks and paper books, we find that the number of checkouts for 
+regular books each year (from 2019 to 2021) goes from _1192 to 366 to 958_ (differences calculated as: _-826, 592_). 
+This suggests that the pandemic and quarantining had a significant effect on the number of checked out physical books
+(probably due to libraries and bookstores being closed, and people not wanting to or allowed to leave their homes). 
+As for eBooks, the numbers (from 2019 to 2021) go from _4403 to 5872 to 10254_ 
+(differences calculated as: _1469, 4382_). There is a definite increase between these years, suggesting that quarantine 
+increased eBook purchases and pushed people to try out eBooks for the first time (and ending up using that method for 
+traveling etc so forth due to its comfortability). It's hard to say whether or not Tiktok really impacted these numbers, 
+considering the popularity of some of Sarah's novels, but one thing for sure we can tell from these calculations is that 
+Covid-19 had a huge impact on the number of books people read as well as the use of eBooks.
+
+Questions used:
 - What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
+- What is the number of checkouts each year?
+- What is the number of eBook vs regular book checkouts in the year 2019?
+- "" 2020
+- "" 2021
+- How did the numbers change between these years? (differences)
+- What is the month with the most checkouts for ebooks in 2020?
+- What are the checkout numbers in 2020 by month?
 
 Feel free to calculate and report values that you find relevant.
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+This dataset focuses on checkouts of any Sarah J. Maas books from the Public Library in Seattle each month from the years 
+2012-2023. This dataset refreshes every month, published and collected by the Seattle Public Library (SPL). They take 
+summary data from their catelogs on checked out books and history of those numbers. We have to take into account 
+accessibility mainly, as some of her books were very popular and hard to get a hold of from libraries. This could lessen 
+the number of checked out physical books if there were not many copies available, or if there was a long line to hold a 
+book. This data set does not account for those that downloaded pdfs of the books off of a website, or those who borrowed 
+the book from someone who already has it (example: borrowed book from sister's collection to read). The dataset also does 
+not precisely show the correlation with the rise of booktok on tiktok for book recommendations, but can give us an idea of 
+how covid-19 quarantining contributed to the numbers. This data collection started April 2005, however we are only looking 
+at Sarah J. Maas books, which starts during 2012. This data was probably collected to look at trends of eBooks versus
+physical books of different genres. With the rise of technology and its uses, it raises questions about the future of 
+libraries, and this data helps vizualise this transformation over the past decade.
+
 
 
 ### First Trends Over Time Chart
 
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully 
+about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some 
+requirements to help guide your design:
 
 - Show more than one, but fewer than ~10 trends
   - For example, two books, or 5 different mediums
