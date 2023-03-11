@@ -8,11 +8,48 @@ books_data <-
 
 #1. Average number of checkouts per item
 avg_checkouts <- books_data %>%
-  summarize(mean(Checkouts))
+  summarize(mean = round(mean(Checkouts),2)) %>% 
+  pull(mean)
 #2. Number of checkouts each year
 num_checkouts_by_year <- books_data %>%
   group_by(CheckoutYear) %>%
   summarize(Checkouts = sum(Checkouts))
+check_2012 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2012) %>%
+  pull(Checkouts)
+check_2013 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2013) %>%
+  pull(Checkouts)
+check_2014 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2014) %>%
+  pull(Checkouts)
+check_2015 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2015) %>%
+  pull(Checkouts)
+check_2016 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2016) %>%
+  pull(Checkouts)
+check_2017 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2017) %>%
+  pull(Checkouts)
+check_2018 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2018) %>%
+  pull(Checkouts)
+check_2019 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2019) %>%
+  pull(Checkouts)
+check_2020 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2020) %>%
+  pull(Checkouts)
+check_2021 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2021) %>%
+  pull(Checkouts)
+check_2022 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2022) %>%
+  pull(Checkouts)
+check_2023 <- num_checkouts_by_year %>%
+  filter(CheckoutYear == 2023) %>%
+  pull(Checkouts)
 #3. Number of Ebook Checkouts Year 2019
 num_ebook_2019 <- books_data %>%
   filter(MaterialType != "BOOK") %>% 

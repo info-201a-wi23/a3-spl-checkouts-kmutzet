@@ -21,7 +21,9 @@ Covid qurantine times, I simply want to see if this is true for books from an
 author like Sarah J. Maas!
 
 ### Summary Information
-
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+source("summary.R")
+```
 
 According to a couple of articles from multiple news sources (like the Guardian), 
 Booktok, a hashtag page on the app Tiktok started and became trending after 
@@ -35,11 +37,11 @@ intense quaranting during the Covid pandemic (libraries and bookstores closed),
 the increased number of books read in general from people being stuck in quarantine, 
 as well as the rise in demand for romance and fantasy novels (from 
 recommendations on Tiktok). The average number of checkouts per item in the 
-dataset is _17.6_ and looking at the number of checkouts per year we 
+dataset is **`r avg_checkouts`** and looking at the number of checkouts per year we 
 got:
-2012: __*80*__ 2013: __*291*__ 2014: __*752*__ 2015: __*1553*__ 2016: __*2563*__
-2017: __*3405*__ 2018: __*4431*__ 2019: __*5595*__ 2020: __*6238*__ 
-2021: __*11212*__ 2022: __*18370*__ 2023: __*2141*__ 
+2012: **`r check_2012`** 2013: **`r check_2013`** 2014: **`r check_2014`** 2015: **`r check_2015`** 
+2016: **`r check_2016`** 2017: **`r check_2017`** 2018: **`r check_2018`** 2019: **`r check_2019`**
+2020: **`r check_2020`** 2021: **`r check_2021`** 2022: **`r check_2022`** 2023: **`r check_2023`** 
 (We are not looking at 2023 too much since the year is not over yet)
 
 Looking at this data we can definitely see a steady increase each year, and a 
@@ -47,21 +49,24 @@ sharp increase (almost doubles from 2020 to 2021) which can imply the theories
 regarding Covid-19 and quarantine, as well as Tiktok. Looking more closely at 
 2020 after the month of August (when Booktok really kicked off), there is a steady 
 increase in the numbers after those months. The month with the maximum eBook 
-checkouts in 2020 was _December_, further proving the previous statement of the 
-increase. Looking at the differences between ebooks and paper books, we find 
-that the number of checkouts for regular books each year (from 2019 to 2021) goes 
-from _1192 to 366 to 958_ (differences calculated as: _-826, 592_). 
+checkouts in 2020 was the **`r max_ebook_2020`**th month, further proving the previous 
+statement of the increase. Looking at the differences between ebooks and paper 
+books, we find that the number of checkouts for regular books each year 
+(from 2019 to 2021) goes from **`r num_book_2019`** to **`r num_book_2020`** to **`r num_book_2021`**
+(differences calculated as: **`r difference_19_to_20b`**, **`r difference_20_to_21b`**). 
 This suggests that the pandemic and quarantining had a significant effect on the 
 number of checked out physical books (probably due to libraries and bookstores 
 being closed, and people not wanting to or allowed to leave their homes). 
-As for eBooks, the numbers (from 2019 to 2021) go from _4403 to 5872 to 10254_ 
-(differences calculated as: _1469, 4382_). There is a definite increase between 
-these years, suggesting that quarantine increased eBook purchases and pushed people 
-to try out eBooks for the first time (and ending up using that method for traveling 
-etc so forth due to its comfortability). It's hard to say whether or not Tiktok 
-really impacted these numbers, considering the popularity of some of Sarah's 
-novels, but one thing for sure we can tell from these calculations is that Covid-19 
-had a huge impact on the number of books people read as well as the use of eBooks.
+As for eBooks, the numbers (from 2019 to 2021) go from **`r num_ebook_2019`** to 
+**`r num_ebook_2020`** to **`r num_ebook_2021`** 
+(differences calculated as: **`r difference_19_to_20e`**, **`r difference_20_to_21e`).** 
+There is a definite increase between these years, suggesting that quarantine 
+increased eBook purchases and pushed people to try out eBooks for the first 
+time (and ending up using that method for traveling etc so forth due to its 
+comfortability). It's hard to say whether or not Tiktok really impacted these 
+numbers, considering the popularity of some of Sarah's novels, but one thing 
+for sure we can tell from these calculations is that Covid-19 had a huge impact 
+on the number of books people read as well as the use of eBooks.
 
 Questions used:
 - What is the average number of checkouts for each item?
@@ -107,7 +112,7 @@ suggests that fantasy and romance novels were quite in demand during quarantine
 as a possible means of escape or way to spend time stuck inside.
 
 
-``````{r, echo = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Ebook vs Physical Book Trends Over Time Chart
@@ -122,8 +127,8 @@ shined during and throughout this whole pandemic with the sharp increase followi
 Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
-```
+``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("chart2_example.R")}
+``````
 
 ### Bar Plot
 This Bar plot shows the different series/titles that Sarah J. Maas has written 
@@ -136,7 +141,7 @@ books during Covid (ACOTAR is a fantasy romance series). This also further
 contributes to the theory surrounding Tiktok's Booktok page influence, as ACOTAR 
 is a popular series with its own hashtag on the app. 
 
-``````{r, echo = FALSE, code = readLines("barplot.R")}
-```
+``````{r, echo = FALSE, message = FALSE, warning = FALSE, code = readLines("barplot.R")}
+``````
 
 
